@@ -1,0 +1,30 @@
+.pagination--standard {
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-right: 1px solid $lightgrey;
+        border-radius: 4px;
+        overflow: hidden;  
+        li {
+            width: 34px;
+            height: 34px;
+            display: flex;
+            place-content: center;
+            place-items: center;
+            cursor: pointer;
+            transition: 0.35s ease all;
+            cursor: pointer;
+            margin: 0;
+            border-top: 1px solid $lightgrey;
+            border-bottom: 1px solid $lightgrey;
+            border-left: 1px solid $lightgrey;
+            border-radius: 0;
+            border-right: none;
+            &.active {
+                @extend .bt--primary;
+            }
+        }
+    }
+}

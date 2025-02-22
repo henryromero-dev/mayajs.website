@@ -1,0 +1,85 @@
+@import '/src/theme/breakpoints.scss';
+@import '/src/theme/colors.scss';
+@import '/src/theme/typography.scss';
+
+
+@include respond-to(desktop) {
+    .container--standard {
+        width: 1200px !important;
+    }
+}
+
+.app--content {
+    .content--title {
+        color: $darkgrey;
+    }
+    p, 
+    li, 
+    td, 
+    th {
+        line-height: 200%;
+        color: $darkgrey;
+    }
+    .list-unstyled {
+        margin: 0;
+    }
+}
+    
+.content--menu {
+    @include respond-to(desktop) {
+        ul {
+            padding: 0;
+            width: 220px;
+            list-style: none;
+            .menu--option {
+                a {
+                    display: block;
+                    padding: 8px 16px;
+                    text-decoration: none;
+                    color: $darkgrey;
+                }
+                &.active {
+                    background-color: rgb(255 200 237 / 20%);
+                    border-left: 4px solid #f5759e;
+                    a {
+                        color: #f5759e;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .menu--title {
+                cursor: default;
+                text-transform: uppercase;
+                color: $lightgrey03;
+            }
+        }
+    }
+    @include respond-to(lg) {
+        ul {
+            padding: 0;
+            width: 100%;
+            list-style: none;
+            .menu--option {
+                a {
+                    display: block;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    color: $darkgrey;
+                }
+                &.active {
+                    background-color: rgb(255 200 237 / 20%);
+                    border-left: none;
+                    a {
+                        color: #f5759e;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .menu--title {
+                cursor: default;
+                text-transform: uppercase;
+                color: $lightgrey03;
+            }
+        }
+    }
+}

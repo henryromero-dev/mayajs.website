@@ -1,0 +1,19 @@
+
+@import '/src/theme/colors.scss';
+@import '/src/theme/breakpoints.scss';
+
+.about {
+    width: 250px;
+    .about__title {
+        text-transform: uppercase;
+        color: $lightgrey03;
+    }
+    .about__text {
+        color: $darkgrey;
+    }
+    @include respond-to(lg) {
+        img {
+            width: 150px;
+        }
+    }
+}

@@ -1,0 +1,211 @@
+@import '/src/theme/breakpoints.scss';
+@import '/src/theme/colors.scss';
+
+.ide__container {
+    background: rgb(58 137 196);
+}
+
+.ide__tab {
+    color: white;
+    background: rgb(58 62 74);
+    border: none;
+    font-size: 14px;
+}
+
+.home {
+    background: linear-gradient(to right, #1fb9d8, #9e6aef);;
+    overflow: hidden;
+
+    @include respond-to(desktop) {
+        height: 512px;
+    }
+
+    @include respond-to(lg) {
+        &__content {
+            text-align: center;
+        }
+    }
+
+    &__body {
+        @include respond-to(desktop) {
+            &--content {
+                width: 1024px !important;
+            }
+        }
+    }
+
+    strong {
+        font-weight: 500;
+        color: #fff8b9;
+    }
+
+    p {
+        line-height: 200%;
+    }
+    
+    img {
+        z-index: 0;
+    }
+    
+    code {
+        background: #3a3e4a;;
+    }
+}
+
+
+@include respond-to(md) {
+    .bg__container {
+        left: calc(50% - 300px) !important;
+    }
+}
+
+.lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    margin: auto;
+    width: 100%;
+}
+
+.line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    left: 0;
+    background: transparent;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 15vw;
+        height: 100%;
+        top: 0;
+        left: -50%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
+        animation: slide 5s 0s infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    }
+
+    &:nth-child(1) {
+        position: absolute;
+        top: 10%;
+
+        &::after {
+            animation-delay: 2s;
+        }
+    }
+
+    &:nth-child(2) {
+        position: absolute;
+        top: 20%;
+
+        &::after {
+            animation-delay: 2.2s;
+        }
+    }
+
+    &:nth-child(3) {
+        position: absolute;
+        top: 30%;
+
+        &::after {
+            animation-delay: 2.4s;
+        }
+    }
+
+    &:nth-child(4) {
+        position: absolute;
+        top: 40%;
+
+        &::after {
+            animation-delay: 2.6s;
+        }
+    }
+
+    &:nth-child(5) {
+        position: absolute;
+        top: 50%;
+
+        &::after {
+            animation-delay: 2.8s;
+        }
+    }
+
+    &:nth-child(6) {
+        position: absolute;
+        top: 60%;
+
+        &::after {
+            animation-delay: 3s;
+        }
+    }
+
+    &:nth-child(7) {
+        position: absolute;
+        top: 70%;
+
+        &::after {
+            animation-delay: 3.2s;
+        }
+    }
+
+    &:nth-child(8) {
+        position: absolute;
+        top: 80%;
+
+        &::after {
+            animation-delay: 3.4s;
+        }
+    }
+
+    &:nth-child(9) {
+        position: absolute;
+        top: 90%;
+
+        &::after {
+            animation-delay: 3.6s;
+        }
+    }
+
+    &:nth-child(10) {
+        position: absolute;
+        top: 100%;
+
+        &::after {
+            animation-delay: 3.8s;
+        }
+    }
+}
+
+@keyframes slide {
+    0% {
+        left: -50%;
+        opacity: 1;
+    }
+
+    25% {
+        left: 25%;
+        opacity: 0;
+    }
+
+    50% {
+        left: 55%;
+        opacity: 0;
+    }
+
+    75% {
+        left: 100%;
+        opacity: 0.8;
+    }
+
+    100% {
+        left: 130%;
+        opacity: 1;
+    }
+}
